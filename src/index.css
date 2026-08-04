@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream: #e7e2d9;
+    --color-cream-dark: #dad4ca;
+    --color-dark-bg: #090e0b;
+    --color-dark-surface: #121a14;
+    --color-accent: #c6ab82;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--color-dark-bg);
+    color: #f2efe9;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080d09;
+}
+::-webkit-scrollbar-thumb {
+  background: #202b23;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c6ab82;
+}
+
+/* Glassmorphic utilities */
+.glass-nav {
+  background: rgba(14, 22, 16, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cream-card-shadow {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+}
