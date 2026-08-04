@@ -5,7 +5,7 @@ const missions = [
   {
     title: "Certified hair experts",
     description: "Cutting-edge equipment ensuring precise and reliable procedures with modern clinical standards.",
-    image: "https://images.unsplash.com/photo-1583082980638-510065a3f360?q=80&w=1200"
+    image: "https://images.unsplash.com/photo-1612942888194-4cec52b62cc3?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     title: "Advanced treatment technology",
@@ -15,12 +15,12 @@ const missions = [
   {
     title: "Proven clinical results",
     description: "Achieving consistently high success rates backed by scientific research and years of dermatological expertise.",
-    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200"
+    image: "https://plus.unsplash.com/premium_photo-1716628818900-d61e6fd49f36?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     title: "Personalized care plans",
     description: "Tailored treatment strategies designed specifically for your unique skin type and individual aesthetic goals.",
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200"
+    image: "https://plus.unsplash.com/premium_photo-1661478253345-41d1351f68ae?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ];
 
@@ -62,24 +62,24 @@ const AccordionItem = ({ item, index, scrollYProgress }) => {
       if (index > 0) sum += v0;
       if (index > 1) sum += v1;
       if (index > 2) sum += v2;
-      return sum * 110; 
+      return sum * 110;
     }
   );
 
   // 3. Local animations for the text
   const ACTIVE_COLOR = "rgba(8, 13, 9, 1)";
   const INACTIVE_COLOR = "rgba(8, 13, 9, 0.4)";
-  
+
   const color = useTransform(openness, [0, 1], [INACTIVE_COLOR, ACTIVE_COLOR]);
   const opacity = useTransform(openness, [0, 1], [0, 1]);
   const descY = useTransform(openness, [0, 1], [-15, 0]);
 
   return (
-    <motion.div 
+    <motion.div
       style={{ y: shiftY }}
       className="border-t border-gray-200 py-5 lg:py-6 w-full bg-[#fdfcf9] z-10 relative"
     >
-      <motion.h3 
+      <motion.h3
         style={{ color }}
         className="text-xl lg:text-2xl font-bold relative z-20 bg-[#fdfcf9]"
       >
@@ -141,7 +141,7 @@ const BottomBorder = ({ scrollYProgress }) => {
 
 export default function MissionSection() {
   const containerRef = useRef(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
@@ -159,13 +159,13 @@ export default function MissionSection() {
     <section ref={containerRef} className="relative h-[400vh] w-full bg-[#fdfcf9]">
       {/* Sticky viewport that stays on screen while we scroll */}
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col">
-        
+
         <div className="w-full max-w-[1600px] mx-auto flex-1 flex flex-col px-6 sm:px-12 lg:px-24 pt-16 lg:pt-24 pb-20">
-          
+
           {/* TOP ROW: Labels and Headings */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12 lg:mb-16">
             <div className="lg:col-span-5">
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -175,9 +175,9 @@ export default function MissionSection() {
                 • Our mission
               </motion.p>
             </div>
-            
+
             <div className="lg:col-span-6 lg:col-start-7">
-              <motion.h2 
+              <motion.h2
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -191,16 +191,16 @@ export default function MissionSection() {
 
           {/* BOTTOM ROW: Accordion and Images */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 flex-1 min-h-0">
-            
+
             {/* LEFT SIDE: Accordion Content */}
             <div className="lg:col-span-5 flex flex-col z-10">
               <div className="flex flex-col w-full relative pb-[120px]">
                 {missions.map((item, index) => (
-                  <AccordionItem 
-                    key={index} 
-                    item={item} 
-                    index={index} 
-                    scrollYProgress={smoothProgress} 
+                  <AccordionItem
+                    key={index}
+                    item={item}
+                    index={index}
+                    scrollYProgress={smoothProgress}
                   />
                 ))}
                 <BottomBorder scrollYProgress={smoothProgress} />
@@ -210,11 +210,11 @@ export default function MissionSection() {
             {/* RIGHT SIDE: Sliding Images */}
             <div className="lg:col-span-6 lg:col-start-7 relative w-full h-full min-h-[300px] rounded-xl overflow-hidden bg-gray-100 shadow-2xl">
               {missions.map((item, index) => (
-                <SlidingImage 
-                  key={index} 
-                  item={item} 
-                  index={index} 
-                  scrollYProgress={smoothProgress} 
+                <SlidingImage
+                  key={index}
+                  item={item}
+                  index={index}
+                  scrollYProgress={smoothProgress}
                 />
               ))}
             </div>

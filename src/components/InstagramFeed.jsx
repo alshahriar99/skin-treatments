@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const InstagramIcon = ({ className }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="1.5" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
     className={className}
   >
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -23,19 +23,19 @@ const feedImages = [
   "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=600&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1618060932014-4deda4932554?q=80&w=600&auto=format&fit=crop",
+  "https://plus.unsplash.com/premium_photo-1664298990712-161996d8b42d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=600&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1598661643465-e7f093019808?q=80&w=600&auto=format&fit=crop"
+  "https://plus.unsplash.com/premium_photo-1679046948726-72f7d53296c5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ];
 
 export default function InstagramFeed() {
   return (
     <section className="w-full bg-white py-24 lg:py-32 overflow-hidden">
-      
+
       {/* Header Container */}
       <div className="w-full max-w-[1400px] mx-auto px-6 mb-20 lg:mb-28 flex flex-col items-center justify-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -46,9 +46,9 @@ export default function InstagramFeed() {
           <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center mb-8 text-gray-400 hover:text-black hover:border-black transition-colors duration-300 cursor-pointer">
             <InstagramIcon className="w-6 h-6" />
           </div>
-          
+
           {/* Main Title */}
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -63,19 +63,19 @@ export default function InstagramFeed() {
       {/* Marquee Gallery */}
       <div className="relative w-full overflow-hidden group py-12">
         <div className="flex w-max animate-marquee-insta group-hover:[animation-play-state:paused]">
-          
+
           {/* Set 1 */}
           <div className="flex gap-6 lg:gap-8 px-3 lg:px-4">
             {feedImages.map((src, index) => (
-              <div 
-                key={`set1-${index}`} 
+              <div
+                key={`set1-${index}`}
                 className={`w-[260px] md:w-[300px] lg:w-[350px] aspect-square flex-shrink-0 relative overflow-hidden group/item cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-300 
                   ${index % 2 === 0 ? 'translate-y-8 lg:translate-y-12' : '-translate-y-8 lg:-translate-y-12'}`}
               >
-                <img 
-                  src={src} 
-                  alt="Clinic aesthetic" 
-                  className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover/item:scale-110" 
+                <img
+                  src={src}
+                  alt="Clinic aesthetic"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover/item:scale-110"
                 />
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -88,15 +88,15 @@ export default function InstagramFeed() {
           {/* Set 2 (For seamless looping) */}
           <div className="flex gap-6 lg:gap-8 px-3 lg:px-4">
             {feedImages.map((src, index) => (
-              <div 
-                key={`set2-${index}`} 
+              <div
+                key={`set2-${index}`}
                 className={`w-[260px] md:w-[300px] lg:w-[350px] aspect-square flex-shrink-0 relative overflow-hidden group/item cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-300 
                   ${index % 2 === 0 ? 'translate-y-8 lg:translate-y-12' : '-translate-y-8 lg:-translate-y-12'}`}
               >
-                <img 
-                  src={src} 
-                  alt="Clinic aesthetic" 
-                  className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover/item:scale-110" 
+                <img
+                  src={src}
+                  alt="Clinic aesthetic"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover/item:scale-110"
                 />
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -110,7 +110,8 @@ export default function InstagramFeed() {
       </div>
 
       {/* Global styles for the marquee animation */}
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes marquee-insta {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-50%); }

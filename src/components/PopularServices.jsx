@@ -25,7 +25,7 @@ const services = [
     id: 4,
     title: "Chemical Peels",
     description: "Exfoliates for a smoother, brighter complexion",
-    image: "https://images.unsplash.com/photo-1615397323207-6b048590623a?q=80&w=800",
+    image: "https://images.unsplash.com/photo-1731514771613-991a02407132?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 5,
@@ -44,10 +44,10 @@ const services = [
 export default function PopularServices() {
   return (
     <section className="w-full bg-[#edf0ec] py-20 lg:py-32 overflow-hidden">
-      
+
       {/* Header */}
       <div className="flex flex-col items-center justify-center text-center px-6 mb-16">
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -56,7 +56,7 @@ export default function PopularServices() {
         >
           • Popular services
         </motion.p>
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -69,20 +69,20 @@ export default function PopularServices() {
 
       {/* Infinite Marquee Container */}
       <div className="relative w-full group">
-        
+
         {/* We use two identical blocks of cards to create the seamless loop.
             The animate-marquee class shifts them by -50% to create the infinite scroll. */}
         <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] gap-4 sm:gap-6 px-2 sm:px-3">
-          
+
           {/* First Set */}
           {services.map((service) => (
-            <div 
-              key={`first-${service.id}`} 
+            <div
+              key={`first-${service.id}`}
               className="relative w-[320px] sm:w-[480px] lg:w-[650px] xl:w-[750px] aspect-square rounded-xl overflow-hidden cursor-pointer group/card"
             >
-              <img 
-                src={service.image} 
-                alt={service.title} 
+              <img
+                src={service.image}
+                alt={service.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
@@ -99,13 +99,13 @@ export default function PopularServices() {
 
           {/* Second Set (Duplicate for seamless loop) */}
           {services.map((service) => (
-            <div 
-              key={`second-${service.id}`} 
+            <div
+              key={`second-${service.id}`}
               className="relative w-[320px] sm:w-[480px] lg:w-[650px] xl:w-[750px] aspect-square rounded-xl overflow-hidden cursor-pointer group/card"
             >
-              <img 
-                src={service.image} 
-                alt={service.title} 
+              <img
+                src={service.image}
+                alt={service.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
@@ -119,12 +119,12 @@ export default function PopularServices() {
               </div>
             </div>
           ))}
-          
+
         </div>
       </div>
 
       {/* Bottom Pill */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
@@ -142,7 +142,8 @@ export default function PopularServices() {
       </motion.div>
 
       {/* Inject custom keyframe animation for the marquee */}
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes marquee {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-50%); }

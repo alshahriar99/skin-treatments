@@ -253,7 +253,7 @@ export default function CinematicHero() {
             {/* ----------------------------------------------------------- */}
             <motion.div
               style={{ opacity: creamContentOpacity, y: creamContentY }}
-              className="w-full px-6 sm:px-12 pt-6 sm:pt-10 pb-12 sm:pb-16 bg-[#e7e2d9] text-[#0f1712] flex flex-col items-center text-center"
+              className="w-full px-6 sm:px-12 pt-6 sm:pt-10 pb-8 sm:pb-16 bg-[#e7e2d9] text-[#0f1712] flex flex-col items-center text-center"
             >
               {/* Small Eyebrow Title */}
               <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#526356] mb-3">
@@ -262,7 +262,7 @@ export default function CinematicHero() {
               </div>
 
               {/* Large Heading */}
-              <motion.h2 
+              <motion.h2
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}

@@ -4,13 +4,13 @@ import { ArrowUpRight, Star } from 'lucide-react';
 
 const teamMembers = [
   { id: 1, name: "Dr. Sarah Jenkins", role: "Laser Specialist", image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop" },
-  { id: 2, name: "Dr. Michael Chen", role: "Dermatologist", image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=600&auto=format&fit=crop" },
-  { id: 3, name: "Dr. Emily Roberts", role: "Cosmetic Surgeon", image: "https://images.unsplash.com/photo-1594824436951-7f126f58f5bc?q=80&w=600&auto=format&fit=crop" },
+  { id: 2, name: "Dr. Michael Chen", role: "Dermatologist", image: "https://plus.unsplash.com/premium_photo-1723514536306-26fe5c4adeb7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { id: 3, name: "Dr. Emily Roberts", role: "Cosmetic Surgeon", image: "https://plus.unsplash.com/premium_photo-1664475543697-229156438e1e?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
   { id: 4, name: "Dr. James Wilson", role: "Skin Therapist", image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop" },
-  { id: 5, name: "Dr. Olivia Davis", role: "Clinical Director", image: "https://images.unsplash.com/photo-1527613426496-228bb8471131?q=80&w=600&auto=format&fit=crop" },
-  { id: 6, name: "Dr. Daniel Lee", role: "Aesthetic Doctor", image: "https://images.unsplash.com/photo-1618060932014-4deda4932554?q=80&w=600&auto=format&fit=crop" },
+  { id: 5, name: "Dr. Olivia Davis", role: "Clinical Director", image: "https://plus.unsplash.com/premium_photo-1674760948483-e6ff62807356?q=80&w=772&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { id: 6, name: "Dr. Daniel Lee", role: "Aesthetic Doctor", image: "https://images.unsplash.com/photo-1657551734497-30a09e6567bc?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
   { id: 7, name: "Dr. Marcus Johnson", role: "Anti-aging Expert", image: "https://images.unsplash.com/photo-1605462863863-10d9e47e15ee?q=80&w=600&auto=format&fit=crop" },
-  { id: 8, name: "Dr. Sophia Patel", role: "Pediatric Dermatologist", image: "https://images.unsplash.com/photo-1598661643465-e7f093019808?q=80&w=600&auto=format&fit=crop" },
+  { id: 8, name: "Dr. Sophia Patel", role: "Pediatric Dermatologist", image: "https://plus.unsplash.com/premium_photo-1661341423936-40b48564a5bf?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
 ];
 
 const satisfiedClients = [
@@ -34,27 +34,27 @@ export default function MeetOurTeam() {
 
   const fadeUpVariant = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      y: 0,
       transition: { type: "spring", stiffness: 80, damping: 20 }
     }
   };
 
   const headingVariant = {
     hidden: { opacity: 0, y: 80 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      y: 0,
       transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] }
     }
   };
 
   const imageVariant = {
     hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
-    visible: { 
-      opacity: 1, 
-      scale: 1, 
+    visible: {
+      opacity: 1,
+      scale: 1,
       filter: "blur(0px)",
       transition: { type: "spring", stiffness: 60, damping: 15 }
     }
@@ -63,10 +63,10 @@ export default function MeetOurTeam() {
   return (
     <section className="w-full bg-[#efebe4] py-24 lg:py-32 overflow-hidden relative">
       <div className="w-full max-w-[1400px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-start">
-        
+
         {/* Left Column (Sticky Content) */}
         <div className="lg:col-span-5 lg:sticky lg:top-32 flex flex-col justify-center">
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -99,15 +99,15 @@ export default function MeetOurTeam() {
               {/* Overlapping Avatars */}
               <div className="flex -space-x-4">
                 {satisfiedClients.map((img, i) => (
-                  <div 
-                    key={i} 
+                  <div
+                    key={i}
                     className="w-14 h-14 rounded-full border-2 border-[#efebe4] overflow-hidden hover:-translate-y-2 transition-transform duration-300 relative z-10 hover:z-20 shadow-md"
                   >
                     <img src={img} alt="Client" className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>
-              
+
               {/* Stats */}
               <div className="flex flex-col">
                 <div className="flex items-center gap-2">
@@ -124,7 +124,7 @@ export default function MeetOurTeam() {
 
         {/* Right Column (Team Grid) */}
         <div className="lg:col-span-7 lg:pl-10">
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -138,12 +138,12 @@ export default function MeetOurTeam() {
                 className="group relative w-full aspect-square rounded-2xl overflow-hidden cursor-pointer bg-gray-200"
               >
                 {/* Image */}
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
+                <img
+                  src={member.image}
+                  alt={member.name}
                   className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                 />
-                
+
                 {/* Overlay (Glassmorphism) - Slides up on hover */}
                 <div className="absolute inset-x-2 bottom-2 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out backdrop-blur-md bg-white/70 border border-white/50 p-4 rounded-xl shadow-lg flex flex-col items-center text-center">
                   <h4 className="text-[#080d09] font-bold text-sm lg:text-base font-['Outfit'] whitespace-nowrap overflow-hidden text-ellipsis w-full">
