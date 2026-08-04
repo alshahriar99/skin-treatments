@@ -21,12 +21,12 @@ export default function Navbar() {
     <header className="absolute top-0 left-0 right-0 z-50 px-4 sm:px-8 py-4 sm:py-6 transition-all duration-300 pointer-events-auto">
       <div className="max-w-[1600px] mx-auto flex items-center justify-between">
         {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-full bg-[#c6ab82]/20 border border-[#c6ab82]/40 flex items-center justify-center text-[#c6ab82] group-hover:scale-105 transition-transform">
+        <a href="#" className="flex items-center gap-2 group">
+          <div className="w-8 h-8 rounded-full bg-[#1b241c] border border-[#3d4d41] flex items-center justify-center text-[#c6ab82] group-hover:bg-[#c6ab82] group-hover:text-[#080d09] transition-colors duration-300">
             <Sparkles className="w-4 h-4" />
           </div>
-          <span className="font-['Outfit'] text-2xl font-bold tracking-tight text-white">
-            Ixolyn
+          <span className="text-xl font-bold tracking-tight text-white font-['Outfit']">
+            Lumina
           </span>
         </a>
 

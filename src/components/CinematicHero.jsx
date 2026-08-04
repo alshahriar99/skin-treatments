@@ -117,7 +117,7 @@ export default function CinematicHero() {
         >
           <img
             src="/images/hero-image.avif"
-            alt="Ixolyn luxury skin treatment hero"
+            alt="Lumina luxury skin treatment hero"
             className="w-full h-full object-cover object-center"
           />
           {/* Dynamic dark gradient overlay */}

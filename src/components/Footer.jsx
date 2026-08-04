@@ -50,7 +50,7 @@ export default function Footer() {
                 <Sparkles className="w-3.5 h-3.5" />
               </div>
               <span className="font-['Outfit'] text-2xl font-bold tracking-tight text-white">
-                Ixolyn
+                Lumina
               </span>
             </div>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
@@ -104,8 +104,8 @@ export default function Footer() {
           transition={{ duration: 1, delay: 0.4 }}
           className="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4"
         >
-          <p>© {new Date().getFullYear()} Ixolyn Skin Treatment Clinic. All rights reserved.</p>
-          <div className="flex gap-6">
+          <p>© {new Date().getFullYear()} Lumina Skin Treatment Clinic. All rights reserved.</p>
+          <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-gray-300">Privacy Policy</a>
             <a href="#" className="hover:text-gray-300">Terms of Service</a>
           </div>
