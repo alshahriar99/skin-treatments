@@ -116,9 +116,9 @@ export default function CinematicHero() {
           style={{ scale: bgScale }}
         >
           <img
-            src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1600&auto=format&fit=crop"
+            src="/images/hero-image.avif"
             alt="Ixolyn luxury skin treatment hero"
-            className="w-full h-full object-cover object-center opacity-80"
+            className="w-full h-full object-cover object-center"
           />
           {/* Dynamic dark gradient overlay */}
           <motion.div
@@ -203,8 +203,7 @@ export default function CinematicHero() {
               >
                 <video
                   ref={videoRef}
-                  src="https://www.w3schools.com/html/mov_bbb.mp4"
-                  poster="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1600&auto=format&fit=crop"
+                  src="/images/skin-care.mp4"
                   autoPlay
                   loop
                   muted={isMuted}
