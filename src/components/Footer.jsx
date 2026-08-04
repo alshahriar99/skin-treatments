@@ -45,11 +45,11 @@ export default function Footer() {
           className="grid grid-cols-1 md:grid-cols-4 gap-10"
         >
           <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-full bg-[#c6ab82]/20 flex items-center justify-center text-[#c6ab82]">
-                <Sparkles className="w-3.5 h-3.5" />
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-[#c6ab82]/20 flex items-center justify-center text-[#c6ab82]">
+                <Sparkles className="w-4 h-4" />
               </div>
-              <span className="font-['Outfit'] text-2xl font-bold tracking-tight text-white">
+              <span className="font-['Outfit'] text-3xl font-bold tracking-tight text-white">
                 Lumina
               </span>
             </div>

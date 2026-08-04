@@ -21,11 +21,11 @@ export default function Navbar() {
     <header className="absolute top-0 left-0 right-0 z-50 px-4 sm:px-8 py-4 sm:py-6 transition-all duration-300 pointer-events-auto">
       <div className="max-w-[1600px] mx-auto flex items-center justify-between">
         {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-full bg-[#1b241c] border border-[#3d4d41] flex items-center justify-center text-[#c6ab82] group-hover:bg-[#c6ab82] group-hover:text-[#080d09] transition-colors duration-300">
-            <Sparkles className="w-4 h-4" />
+        <a href="#" className="flex items-center gap-2 sm:gap-3 group">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#1b241c] border border-[#3d4d41] flex items-center justify-center text-[#c6ab82] group-hover:bg-[#c6ab82] group-hover:text-[#080d09] transition-colors duration-300">
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-white font-['Outfit']">
+          <span className="text-2xl sm:text-3xl font-bold tracking-tight text-white font-['Outfit']">
             Lumina
           </span>
         </a>
