@@ -70,11 +70,11 @@ export default function CinematicHero() {
 
   // Phase 1: Increase padding to 12vh to match the thickening side borders.
   // Phase 2: Increase padding to 27vh to offset the 15vh card upward movement (keeps video still)
-  // Phase 3: Decrease padding to 14vh to slide video & text UP so text fully fits on screen!
+  // Phase 3: Decrease padding to 4vh to slide video & text UP so text fully fits on screen!
   const cardPaddingTop = useTransform(
     smoothProgress,
     [0, 0.4, 0.7, 0.95],
-    ["2.2vh", "12vh", "27vh", "14vh"],
+    ["2.2vh", "12vh", "27vh", "4vh"],
   );
 
   // Phase 3: Cream Content Card inner content reveals while sliding up (0.7 to 0.95)
@@ -253,7 +253,7 @@ export default function CinematicHero() {
             {/* ----------------------------------------------------------- */}
             <motion.div
               style={{ opacity: creamContentOpacity, y: creamContentY }}
-              className="w-full px-6 sm:px-12 py-10 sm:py-14 bg-[#e7e2d9] text-[#0f1712] flex flex-col items-center text-center"
+              className="w-full px-6 sm:px-12 pt-6 sm:pt-10 pb-12 sm:pb-16 bg-[#e7e2d9] text-[#0f1712] flex flex-col items-center text-center"
             >
               {/* Small Eyebrow Title */}
               <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#526356] mb-3">

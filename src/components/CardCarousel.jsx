@@ -53,7 +53,7 @@ const carouselData = [
   },
   {
     id: 9,
-    img: "https://images.unsplash.com/photo-1615397323207-6b048590623a?q=80&w=800",
+    img: "https://images.unsplash.com/photo-1670201202794-b589d5d7e9da?q=80&w=676&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Chemical peels",
     desc: "Professional-grade peels designed to exfoliate dead skin cells, revealing a brighter, smoother, and completely renewed surface.",
   },
@@ -151,16 +151,15 @@ export default function CardCarousel() {
   return (
     <section className="bg-[#e7e2d9] h-full flex flex-col justify-center pt-0 pb-4 lg:pt-20 lg:pb-16 overflow-hidden relative">
       {/* Header Section */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
         className="max-w-[1600px] w-full mx-auto px-6 sm:px-12 lg:px-10 mb-2 sm:mb-4 flex flex-col lg:flex-row lg:items-end justify-between gap-8"
       >
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#080d09] max-w-4xl leading-[1.15] font-['Outfit']">
-          Experience personalized skin treatments designed to restore, protect,
-          and enhance your natural glow.
+        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#080d09] max-w-4xl leading-[1.15] font-['Outfit']">
+          Experience Personalized Skincare for Healthy, Radiant, and Beautiful Skin
         </h2>
         <a
           href="#consultation"
@@ -171,7 +170,7 @@ export default function CardCarousel() {
       </motion.div>
 
       {/* Carousel Section */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.96 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, margin: "-50px" }}
@@ -202,11 +201,10 @@ export default function CardCarousel() {
             return (
               <div
                 key={card.uniqueId}
-                className={`relative flex flex-col items-center snap-center shrink-0 w-[60vw] lg:w-[24.5vw] transition-all duration-500 ease-out ${
-                  isActive
-                    ? "scale-100 opacity-100"
-                    : "scale-95 opacity-40 hover:opacity-70"
-                }`}
+                className={`relative flex flex-col items-center snap-center shrink-0 w-[60vw] lg:w-[24.5vw] transition-all duration-500 ease-out ${isActive
+                  ? "scale-100 opacity-100"
+                  : "scale-95 opacity-40 hover:opacity-70"
+                  }`}
                 onClick={() => {
                   if (!isActive && scrollRef.current) {
                     const child = scrollRef.current.children[index];
@@ -223,23 +221,20 @@ export default function CardCarousel() {
               >
                 {/* Polaroid Card */}
                 <div
-                  className={`w-full bg-[#fdfcf9] p-3 pb-6 rounded-sm cursor-pointer transition-shadow duration-500 ${
-                    isActive ? "shadow-2xl" : "shadow-sm"
-                  }`}
+                  className={`w-full bg-[#fdfcf9] p-3 pb-6 rounded-sm cursor-pointer transition-shadow duration-500 ${isActive ? "shadow-2xl" : "shadow-sm"
+                    }`}
                 >
                   <div className="relative aspect-[4/5] overflow-hidden mb-5 bg-[#e7e2d9]">
                     <img
                       src={card.img}
                       alt={card.title}
-                      className={`w-full h-full object-cover transition-transform duration-700 ${
-                        isActive ? "scale-105" : "scale-100"
-                      }`}
+                      className={`w-full h-full object-cover transition-transform duration-700 ${isActive ? "scale-105" : "scale-100"
+                        }`}
                     />
                   </div>
                   <h3
-                    className={`text-center font-semibold text-sm sm:text-base lg:text-lg px-2 transition-colors duration-500 ${
-                      isActive ? "text-[#080d09]" : "text-[#738276]"
-                    }`}
+                    className={`text-center font-semibold text-sm sm:text-base lg:text-lg px-2 transition-colors duration-500 ${isActive ? "text-[#080d09]" : "text-[#738276]"
+                      }`}
                   >
                     {card.title}
                   </h3>
@@ -247,11 +242,10 @@ export default function CardCarousel() {
 
                 {/* Description Text */}
                 <p
-                  className={`mt-6 text-center text-[#526356] text-sm leading-relaxed max-w-[85%] transition-all duration-500 ${
-                    isActive
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 -translate-y-4 pointer-events-none"
-                  }`}
+                  className={`mt-6 text-center text-[#526356] text-sm leading-relaxed max-w-[85%] transition-all duration-500 ${isActive
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-4 pointer-events-none"
+                    }`}
                 >
                   {card.desc}
                 </p>
@@ -261,7 +255,8 @@ export default function CardCarousel() {
         </div>
       </motion.div>
 
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
