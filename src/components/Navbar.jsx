@@ -33,38 +33,38 @@ export default function Navbar() {
         {/* Center Pill Nav (Desktop) */}
         <nav className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/40 border border-white/10 backdrop-blur-md shadow-lg">
           <a
-            href="#home"
-            className="px-4 py-1.5 rounded-full bg-[#303d33] text-white text-sm font-medium transition-colors"
+            href="/"
+            className="px-5 py-2 rounded-full text-sm font-medium bg-white/10 text-white shadow-sm transition-all"
           >
             Home
           </a>
           <a
             href="#about"
-            className="px-4 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/5 text-sm font-medium transition-colors"
+            className="px-5 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all"
           >
             About
           </a>
           <a
-            href="#service"
-            className="px-4 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/5 text-sm font-medium transition-colors"
+            href="/services"
+            className="px-5 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all"
           >
             Service
           </a>
           <a
             href="#pages"
-            className="px-4 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/5 text-sm font-medium transition-colors"
+            className="px-5 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all"
           >
             Pages
           </a>
           <a
             href="#blog"
-            className="px-4 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/5 text-sm font-medium transition-colors"
+            className="px-5 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all"
           >
             Blog
           </a>
           <a
             href="#contact"
-            className="px-4 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/5 text-sm font-medium transition-colors"
+            className="px-5 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all"
           >
             Contact
           </a>
