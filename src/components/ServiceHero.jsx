@@ -59,7 +59,7 @@ export default function ServiceHero() {
       {/* 3. The Moving Mobile Frame */}
       <motion.div 
         style={{ x: frameX, y: frameY }}
-        className="relative z-10 w-[320px] sm:w-[380px] md:w-[440px] aspect-[4/5] rounded-[2.5rem] border border-white/40 shadow-2xl overflow-hidden"
+        className="relative z-10 w-[320px] sm:w-[380px] md:w-[440px] aspect-[2/3] rounded-[2.5rem] border border-white/40 shadow-2xl overflow-hidden"
       >
         {/* Inner shadow/glare for glass effect */}
         <div className="absolute inset-0 z-20 rounded-[2.5rem] shadow-[inset_0_0_20px_rgba(255,255,255,0.4)] pointer-events-none" />
