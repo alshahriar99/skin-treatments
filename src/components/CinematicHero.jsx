@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowUpRight, Play, Pause, Volume2, VolumeX } from "lucide-react";
 
 export default function CinematicHero() {
@@ -145,13 +146,13 @@ export default function CinematicHero() {
               Skin & hair restoration treatments
             </p>
 
-            <a
-              href="#booking"
-              className="mt-1 group inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-white/10 hover:bg-white text-white hover:text-black border border-white/20 backdrop-blur-md transition-all duration-300 font-medium text-base shadow-xl"
+            <Link
+              to="/contact"
+              className="group relative inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white text-white hover:text-black text-sm uppercase tracking-widest font-semibold transition-all duration-500 overflow-hidden"
             >
               <span>Book your free consultation</span>
               <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </a>
+            </Link>
           </motion.div>
 
           {/* Right Column: Vertical Feature List */}
@@ -279,13 +280,13 @@ export default function CinematicHero() {
               </p>
 
               {/* CTA Button */}
-              <a
-                href="#treatments"
+              <Link
+                to="/services"
                 className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-[#0f1712] hover:text-[#3d4d41] transition-colors border-b border-[#0f1712]/30 pb-0.5 group"
               >
                 <span>Explore all treatments</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
         </div>

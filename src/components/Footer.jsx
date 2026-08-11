@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
@@ -27,13 +28,13 @@ export default function Footer() {
             </p>
           </div>
 
-          <a
-            href="#booking"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#c6ab82] hover:bg-white text-black font-semibold transition-all duration-300 shadow-xl group"
           >
             <span>Book Appointment Now</span>
             <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </a>
+          </Link>
         </motion.div>
 
         {/* Footer Navigation */}
@@ -63,10 +64,10 @@ export default function Footer() {
               Treatments
             </h4>
             <ul className="flex flex-col gap-2.5 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Hair Restoration</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Tattoo Removal</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Injectables & Fillers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Laser Resurfacing</a></li>
+              <li><Link to="/services/hair-restoration" className="hover:text-white transition-colors">Hair Restoration</Link></li>
+              <li><Link to="/services/tattoo-removal" className="hover:text-white transition-colors">Tattoo Removal</Link></li>
+              <li><Link to="/services/injectables" className="hover:text-white transition-colors">Injectables & Fillers</Link></li>
+              <li><Link to="/services/laser-resurfacing" className="hover:text-white transition-colors">Laser Resurfacing</Link></li>
             </ul>
           </div>
 
@@ -74,11 +75,10 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-[#c6ab82] mb-4">
               Quick Links
             </h4>
-            <ul className="flex flex-col gap-2.5 text-sm text-gray-400">
-              <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#service" className="hover:text-white transition-colors">Our Services</a></li>
-              <li><a href="#blog" className="hover:text-white transition-colors">Latest Articles</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact Clinic</a></li>
+            <ul className="space-y-4 text-gray-400 font-medium">
+              <li><Link to="/services" className="hover:text-white transition-colors">Our Services</Link></li>
+              <li><Link to="/blog" className="hover:text-white transition-colors">Latest Articles</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact Clinic</Link></li>
             </ul>
           </div>
 

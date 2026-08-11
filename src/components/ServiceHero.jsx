@@ -5,19 +5,24 @@ import { ArrowUpRight } from 'lucide-react';
 export default function ServiceHero() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+  const hoverScale = useMotionValue(1);
 
-  // Smooth springs for buttery movement
-  const springConfig = { damping: 25, stiffness: 150 };
+  // Smooth springs for buttery, soft movement
+  const springConfig = { damping: 40, stiffness: 80, mass: 1.5 };
   const smoothX = useSpring(mouseX, springConfig);
   const smoothY = useSpring(mouseY, springConfig);
 
-  // Transform mouse position to slightly move the frame
-  const frameX = useTransform(smoothX, [-0.5, 0.5], [-35, 35]);
-  const frameY = useTransform(smoothY, [-0.5, 0.5], [-35, 35]);
+  // Transform mouse position to slightly move the frame (reduced range for softer feel)
+  const frameX = useTransform(smoothX, [-0.5, 0.5], [-20, 20]);
+  const frameY = useTransform(smoothY, [-0.5, 0.5], [-20, 20]);
 
   // Inverse movement for the inner image so it stays locked to the background!
-  const imgX = useTransform(smoothX, [-0.5, 0.5], [35, -35]);
-  const imgY = useTransform(smoothY, [-0.5, 0.5], [35, -35]);
+  const imgX = useTransform(smoothX, [-0.5, 0.5], [20, -20]);
+  const imgY = useTransform(smoothY, [-0.5, 0.5], [20, -20]);
+
+  // Hover scale with inverse for the image to prevent "zooming" the glass effect
+  const smoothHoverScale = useSpring(hoverScale, { damping: 20, stiffness: 300 });
+  const invScale = useTransform(smoothHoverScale, (v) => 1 / v);
 
   const handleMouseMove = (e) => {
     // Normalize mouse position to -0.5 to 0.5
@@ -28,9 +33,14 @@ export default function ServiceHero() {
     mouseY.set(y);
   };
 
+  const handleMouseEnter = () => {
+    hoverScale.set(1.08);
+  };
+
   const handleMouseLeave = () => {
     mouseX.set(0);
     mouseY.set(0);
+    hoverScale.set(1);
   };
 
   return (
@@ -43,7 +53,7 @@ export default function ServiceHero() {
       <img 
         src="/images/service-hero.png" 
         alt="Background" 
-        className="absolute inset-0 w-full h-full object-cover scale-[1.05] blur-[12px] brightness-95"
+        className="absolute inset-0 w-full h-full object-cover scale-[1.05] blur-[8px] brightness-95"
       />
 
       {/* 2. Left Content */}
@@ -58,18 +68,19 @@ export default function ServiceHero() {
 
       {/* 3. The Moving Mobile Frame */}
       <motion.div 
-        style={{ x: frameX, y: frameY }}
-        className="relative z-10 w-[320px] sm:w-[380px] md:w-[440px] aspect-[2/3] rounded-[2.5rem] border border-white/40 shadow-2xl overflow-hidden"
+        onMouseEnter={handleMouseEnter}
+        style={{ x: frameX, y: frameY, scale: smoothHoverScale }}
+        className="relative z-10 w-[340px] sm:w-[400px] md:w-[480px] aspect-[5/7] rounded-[1.5rem] border border-white/40 shadow-2xl overflow-hidden"
       >
         {/* Inner shadow/glare for glass effect */}
-        <div className="absolute inset-0 z-20 rounded-[2.5rem] shadow-[inset_0_0_20px_rgba(255,255,255,0.4)] pointer-events-none" />
+        <div className="absolute inset-0 z-20 rounded-[1.5rem] shadow-[inset_0_0_20px_rgba(255,255,255,0.4)] pointer-events-none" />
         
-        {/* The Crisp Inner Image (Inverse Parallax) */}
+        {/* The Crisp Inner Image (Inverse Parallax & Inverse Scale) */}
         <motion.img 
-          style={{ x: imgX, y: imgY }}
+          style={{ x: imgX, y: imgY, scale: invScale }}
           src="/images/service-hero.png" 
           alt="Crisp Hero" 
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[100vw] min-h-[100vh] object-cover pointer-events-none"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[110vw] min-h-[110vh] object-cover pointer-events-none"
         />
       </motion.div>
 
